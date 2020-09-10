@@ -15,7 +15,7 @@ final class AppRouter {
     }
     
     static func runMainFlow() {
-        let mainController = GalleryViewController()
+        let mainController = InitialViewController()
         let navigation = UINavigationController(rootViewController: mainController)
         changeFlowTo(controller: navigation)
     }

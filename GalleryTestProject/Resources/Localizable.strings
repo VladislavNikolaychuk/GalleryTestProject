@@ -1,0 +1,14 @@
+//
+//  Localizable.strings
+//  GalleryTestProject
+//
+//  Created by Vladislav Nikolaychuck on 10.09.2020.
+//  Copyright © 2020 Vladislav Nikolaychuck. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+
+"image" = "Image";
+"video" = "Video";
