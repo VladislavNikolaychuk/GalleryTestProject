@@ -34,8 +34,7 @@ class ImagePreviewController: UIViewController {
             guard let image = image else {
                 return
             }
-            var imageImage = UIImage(named: "devel.jpg")
-            self.imageScrollView.set(image: imageImage!)
+            self.imageScrollView.set(image: image)
         }
     }
 

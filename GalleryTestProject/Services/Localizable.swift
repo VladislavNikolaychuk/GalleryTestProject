@@ -15,6 +15,10 @@ enum Text: String, Localizable {
     
     case video
     case image
+    case goToSettings
+    case alertSettingsTitle
+    case alertCancelTitle
+    case titleSettings
     
     var localized: String {
         return NSLocalizedString(self.rawValue, comment: "")

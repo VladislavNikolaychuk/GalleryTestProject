@@ -68,5 +68,10 @@ extension GalleryCollectionView: UICollectionViewDataSource, UICollectionViewDel
         }
         return itemCell
     }
-    
+}
+
+extension GalleryCollectionView: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: itemSize, height: itemSize)
+    }
 }

@@ -32,7 +32,7 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
     }
     
     func set(image: UIImage) {
-        
+        self.backgroundColor = .black
         imageZoomView?.removeFromSuperview()
         imageZoomView = nil
         imageZoomView = UIImageView(image: image)
@@ -82,7 +82,9 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
     }
     
     func centerImage() {
+        
         let boundsSize = self.bounds.size
+        let boundsSizeHeight = superview?.safeAreaLayoutGuide.layoutFrame.height ?? boundsSize.height
         var frameToCenter = imageZoomView.frame
         
         if frameToCenter.size.width < boundsSize.width {
@@ -91,8 +93,8 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
             frameToCenter.origin.x = 0
         }
         
-        if frameToCenter.size.height < boundsSize.height {
-            frameToCenter.origin.y = (boundsSize.height - frameToCenter.size.height) / 2
+        if frameToCenter.size.height < boundsSizeHeight {
+            frameToCenter.origin.y = (boundsSizeHeight - frameToCenter.size.height) / 2
         } else {
             frameToCenter.origin.y = 0
         }

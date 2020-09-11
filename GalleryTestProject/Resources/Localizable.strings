@@ -12,3 +12,7 @@
 
 "image" = "Image";
 "video" = "Video";
+"goToSettings" = "Go to Settings?";
+"alertSettingsTitle" = "You have not accepted the gallery/photo agreement";
+"alertCancelTitle" = "Cancel";
+"titleSettings" = "Settings";
