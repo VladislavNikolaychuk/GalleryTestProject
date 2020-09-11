@@ -19,6 +19,7 @@ enum Text: String, Localizable {
     case alertSettingsTitle
     case alertCancelTitle
     case titleSettings
+    case share
     
     var localized: String {
         return NSLocalizedString(self.rawValue, comment: "")
