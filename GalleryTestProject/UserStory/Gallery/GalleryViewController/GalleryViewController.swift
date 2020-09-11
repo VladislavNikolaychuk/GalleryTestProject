@@ -8,6 +8,7 @@
 
 import UIKit
 import Photos
+import AVKit
 
 class GalleryViewController: BaseController {
     
@@ -25,14 +26,32 @@ class GalleryViewController: BaseController {
             self?.openImageController(asset: asset)
         }
         galleryCollection.videoDidTap = { [weak self] asset in
+            self?.playVideo(asset: asset)
+            
         }
     }
     
     func openImageController(asset: PHAsset) {
         let controller = ImagePreviewConfigurator.create(asset: asset)
-        self.present(controller, animated: true, completion: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
-
+    
+    func playVideo(asset: PHAsset) {
+        guard asset.mediaType == .video else {
+            return
+        }
+        let options = PHVideoRequestOptions()
+        options.isNetworkAccessAllowed = true
+        PHCachingImageManager().requestPlayerItem(forVideo: asset, options: options) { (playerItem, info) in
+            DispatchQueue.main.async {
+                let playerViewController = AVPlayerViewController()
+                playerViewController.player = AVPlayer(playerItem: playerItem)
+                self.present(playerViewController, animated: true) {
+                    playerViewController.player?.play()
+                }
+            }
+        }
+    }
 }
 
 extension GalleryViewController: GalleryViewProtocol {
