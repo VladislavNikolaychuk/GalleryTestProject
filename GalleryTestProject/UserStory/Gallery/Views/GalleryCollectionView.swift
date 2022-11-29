@@ -48,8 +48,10 @@ extension GalleryCollectionView: UICollectionViewDataSource, UICollectionViewDel
                 return UICollectionViewCell()
         }
         
+        
         itemCell.imageView.image = nil
         loadImage(with: fileAsset) { (image) in
+            
             itemCell.imageView.image = image
         }
         switch fileAsset.mediaType {

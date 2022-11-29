@@ -10,7 +10,10 @@ import UIKit
 
 final class AppRouter {
     
-    static func runOnLoadFlow() {
+    static var window: UIWindow?
+    
+    static func runOnLoadFlow(window: UIWindow?) {
+        self.window = window
         AppRouter.runMainFlow()
     }
     
@@ -22,7 +25,7 @@ final class AppRouter {
     
     // MARK: Helpers
     static private func runFadeAnimationForWindow(_ window: UIWindow?) {
-        guard let window = UIApplication.shared.keyWindow else {
+        guard let window = window else {
             return
         }
         let options: UIView.AnimationOptions = .transitionCrossDissolve
@@ -33,7 +36,6 @@ final class AppRouter {
     }
     
     static func changeFlowTo(controller: UIViewController) {
-        let window = UIApplication.shared.keyWindow
         window?.rootViewController = controller
         runFadeAnimationForWindow(window)
     }
