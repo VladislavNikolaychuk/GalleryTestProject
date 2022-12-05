@@ -29,6 +29,14 @@
 		27BBDB49250B57F70016DB34 /* ImagePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BBDB47250B57F70016DB34 /* ImagePreviewViewController.swift */; };
 		27F77807250A69CA00255D18 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F77806250A69CA00255D18 /* ImageScrollView.swift */; };
 		4BD8770A0E342BF1EF14F6DE /* Pods_GalleryTestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A873A393396C03430B28B8C0 /* Pods_GalleryTestProject.framework */; };
+		A267374C293E149A003BFF79 /* TenserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A267374A293E149A003BFF79 /* TenserVC.swift */; };
+		A267374F293E15A1003BFF79 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A267374E293E15A1003BFF79 /* OverlayView.swift */; };
+		A2673751293E18B5003BFF79 /* ObjectDetectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2673750293E18B5003BFF79 /* ObjectDetectionHelper.swift */; };
+		A2673753293E190F003BFF79 /* TFModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2673752293E190F003BFF79 /* TFModels.swift */; };
+		A2673758293E1D05003BFF79 /* ssd_mobilenet_v1.tflite in Resources */ = {isa = PBXBuildFile; fileRef = A2673754293E1D04003BFF79 /* ssd_mobilenet_v1.tflite */; };
+		A2673759293E1D05003BFF79 /* efficientdet_lite1.tflite in Resources */ = {isa = PBXBuildFile; fileRef = A2673755293E1D04003BFF79 /* efficientdet_lite1.tflite */; };
+		A267375A293E1D05003BFF79 /* efficientdet_lite2.tflite in Resources */ = {isa = PBXBuildFile; fileRef = A2673756293E1D05003BFF79 /* efficientdet_lite2.tflite */; };
+		A267375B293E1D05003BFF79 /* efficientdet_lite0.tflite in Resources */ = {isa = PBXBuildFile; fileRef = A2673757293E1D05003BFF79 /* efficientdet_lite0.tflite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +65,14 @@
 		27F77806250A69CA00255D18 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
 		49BF5D1CFD8BF0D7249C7A18 /* Pods-GalleryTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryTestProject.release.xcconfig"; path = "Target Support Files/Pods-GalleryTestProject/Pods-GalleryTestProject.release.xcconfig"; sourceTree = "<group>"; };
 		726CAD4A1ABC5BA0D9E08DA5 /* Pods-GalleryTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GalleryTestProject.debug.xcconfig"; path = "Target Support Files/Pods-GalleryTestProject/Pods-GalleryTestProject.debug.xcconfig"; sourceTree = "<group>"; };
+		A267374A293E149A003BFF79 /* TenserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenserVC.swift; sourceTree = "<group>"; };
+		A267374E293E15A1003BFF79 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OverlayView.swift; path = GalleryTestProject/Library/OverlayView.swift; sourceTree = SOURCE_ROOT; };
+		A2673750293E18B5003BFF79 /* ObjectDetectionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionHelper.swift; sourceTree = "<group>"; };
+		A2673752293E190F003BFF79 /* TFModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFModels.swift; sourceTree = "<group>"; };
+		A2673754293E1D04003BFF79 /* ssd_mobilenet_v1.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ssd_mobilenet_v1.tflite; sourceTree = "<group>"; };
+		A2673755293E1D04003BFF79 /* efficientdet_lite1.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = efficientdet_lite1.tflite; sourceTree = "<group>"; };
+		A2673756293E1D05003BFF79 /* efficientdet_lite2.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = efficientdet_lite2.tflite; sourceTree = "<group>"; };
+		A2673757293E1D05003BFF79 /* efficientdet_lite0.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = efficientdet_lite0.tflite; sourceTree = "<group>"; };
 		A873A393396C03430B28B8C0 /* Pods_GalleryTestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GalleryTestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -180,6 +196,7 @@
 		27A755E72508E024000CF881 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A267374E293E15A1003BFF79 /* OverlayView.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,6 +224,13 @@
 			isa = PBXGroup;
 			children = (
 				27A755F02508E4B9000CF881 /* BaseController.swift */,
+				A267374A293E149A003BFF79 /* TenserVC.swift */,
+				A2673750293E18B5003BFF79 /* ObjectDetectionHelper.swift */,
+				A2673752293E190F003BFF79 /* TFModels.swift */,
+				A2673757293E1D05003BFF79 /* efficientdet_lite0.tflite */,
+				A2673755293E1D04003BFF79 /* efficientdet_lite1.tflite */,
+				A2673756293E1D05003BFF79 /* efficientdet_lite2.tflite */,
+				A2673754293E1D04003BFF79 /* ssd_mobilenet_v1.tflite */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -316,11 +340,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A267375A293E1D05003BFF79 /* efficientdet_lite2.tflite in Resources */,
 				271BF0F8250911040000DFE0 /* GalleryCell.xib in Resources */,
 				27061C95250A363600B25309 /* Localizable.strings in Resources */,
+				A2673758293E1D05003BFF79 /* ssd_mobilenet_v1.tflite in Resources */,
+				A2673759293E1D05003BFF79 /* efficientdet_lite1.tflite in Resources */,
 				27A755FD2508ECB4000CF881 /* LaunchScreen.storyboard in Resources */,
 				27A755F52508E6D8000CF881 /* GalleryViewController.xib in Resources */,
 				27A755DA2508B704000CF881 /* Assets.xcassets in Resources */,
+				A267375B293E1D05003BFF79 /* efficientdet_lite0.tflite in Resources */,
 				27A756082508FC98000CF881 /* InitialViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,14 +402,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2673753293E190F003BFF79 /* TFModels.swift in Sources */,
 				27061C93250A354F00B25309 /* Localizable.swift in Sources */,
 				271BF0FA2509130A0000DFE0 /* GalleryPresenter.swift in Sources */,
 				27A756072508FC98000CF881 /* InitialViewController.swift in Sources */,
+				A267374C293E149A003BFF79 /* TenserVC.swift in Sources */,
 				27A755F12508E4B9000CF881 /* BaseController.swift in Sources */,
 				27BBDB49250B57F70016DB34 /* ImagePreviewViewController.swift in Sources */,
 				27A755F42508E6D8000CF881 /* GalleryViewController.swift in Sources */,
+				A267374F293E15A1003BFF79 /* OverlayView.swift in Sources */,
 				271BF0F025090EC70000DFE0 /* GalleryCollectionView.swift in Sources */,
 				27061C91250A04E400B25309 /* GalleryConfigurator.swift in Sources */,
+				A2673751293E18B5003BFF79 /* ObjectDetectionHelper.swift in Sources */,
 				27061C9F250A44AB00B25309 /* ImagePreviewConfigurator.swift in Sources */,
 				27A755D12508B702000CF881 /* AppDelegate.swift in Sources */,
 				27061C9D250A446600B25309 /* ImagePreviewPresenter.swift in Sources */,
@@ -516,6 +548,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7QWPMKUD6B;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = GalleryTestProject/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -536,6 +569,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7QWPMKUD6B;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = GalleryTestProject/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

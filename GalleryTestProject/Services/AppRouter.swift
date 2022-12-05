@@ -15,7 +15,7 @@ final class AppRouter {
     }
     
     static func runMainFlow() {
-        let mainController = InitialViewController()
+        let mainController = TenserVC()
         let navigation = UINavigationController(rootViewController: mainController)
         changeFlowTo(controller: navigation)
     }
